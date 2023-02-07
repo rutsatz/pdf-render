@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+//    implementation group: 'com.itextpdf', name: 'itext7-core', version: '7.1.9'
+//    implementation group: 'com.itextpdf', name: 'html2pdf', version: '2.1.6'
+
+    // https://mvnrepository.com/artifact/com.itextpdf/itext7-core
+    implementation group: 'com.itextpdf', name: 'itext7-core', version: '7.2.4', ext: 'pom'
+    // https://mvnrepository.com/artifact/com.itextpdf/html2pdf
+    implementation group: 'com.itextpdf', name: 'html2pdf', version: '4.0.4'
+
+
+
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+}
+
+test {
+    useJUnitPlatform()
+}
